@@ -29,7 +29,28 @@ const corsOptions = {
 app.use(cors(corsOptions));
 ```
 
-### 2. Alternative Dynamic CORS Configuration
+### 2. EXACT Fix for Your Current Error
+
+Based on your Render logs, your Netlify URL is `https://au-pair.netlify.app/`. Update your backend CORS to include this exact domain:
+
+```typescript
+const corsOptions = {
+  origin: [
+    'https://au-pair.netlify.app',  // Your actual Netlify URL
+    'https://deploy-preview-*--au-pair.netlify.app', // Preview deployments
+    'http://localhost:5173', // Local development (Vite)
+    'http://localhost:3000', // Local development (alternative)
+    'http://localhost:5000', // Local development (current setup)
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
+```
+
+### 3. Alternative Dynamic CORS Configuration
 If you want to allow all Netlify subdomains dynamically, use this approach:
 
 ```typescript
@@ -45,7 +66,7 @@ const corsOptions = {
     ];
     
     // Allow all Netlify domains
-    if (origin.includes('.netlify.app') || allowedOrigins.includes(origin)) {
+    if (origin && (origin.includes('.netlify.app') || allowedOrigins.includes(origin))) {
       return callback(null, true);
     }
     
