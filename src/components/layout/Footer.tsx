@@ -27,58 +27,46 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/safety" className="text-muted-foreground hover:text-foreground">
-                  Safety
+                <Link to="/register" className="text-muted-foreground hover:text-foreground">
+                  Sign Up
                 </Link>
               </li>
               <li>
-                <Link to="/pricing" className="text-muted-foreground hover:text-foreground">
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Support</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/help" className="text-muted-foreground hover:text-foreground">
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-foreground">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq" className="text-muted-foreground hover:text-foreground">
-                  FAQ
+                <Link to="/login" className="text-muted-foreground hover:text-foreground">
+                  Login
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* For Users */}
           <div>
-            <h3 className="text-sm font-semibold mb-4">Legal</h3>
+            <h3 className="text-sm font-semibold mb-4">Get Started</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/privacy" className="text-muted-foreground hover:text-foreground">
-                  Privacy Policy
-                </Link>
+                <span className="text-muted-foreground">Au Pairs</span>
               </li>
               <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-foreground">
-                  Terms of Service
-                </Link>
+                <span className="text-muted-foreground">Host Families</span>
               </li>
               <li>
-                <Link to="/cookies" className="text-muted-foreground hover:text-foreground">
-                  Cookie Policy
-                </Link>
+                <span className="text-muted-foreground">Success Stories</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-sm font-semibold mb-4">Connect</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <span className="text-muted-foreground">hello@aupairconnect.com</span>
+              </li>
+              <li>
+                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+              </li>
+              <li>
+                <span className="text-muted-foreground">Support Center</span>
               </li>
             </ul>
           </div>
