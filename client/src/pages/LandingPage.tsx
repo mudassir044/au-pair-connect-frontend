@@ -316,7 +316,7 @@ const LandingPage: React.FC = () => {
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/register">Get Started Today</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-primary" asChild>
+              <Button size="lg" variant="outline" className="border-white/80 text-white/90 hover:bg-white hover:text-primary dark:border-white/80 dark:text-white/90 dark:hover:bg-white dark:hover:text-primary" asChild>
                 <Link to="/how-it-works">Learn More</Link>
               </Button>
             </div>
