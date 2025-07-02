@@ -7,6 +7,12 @@ export const AuthRedirect: React.FC = () => {
 
   useEffect(() => {
     if (user) {
+      // Check if profile is complete
+      if (!user.profileComplete) {
+        window.location.replace('/onboarding');
+        return;
+      }
+      
       // Redirect based on role
       const dashboardPath = user.role === 'au_pair' 
         ? '/dashboard/au-pair'
@@ -27,6 +33,11 @@ export const AuthRedirect: React.FC = () => {
   }
 
   if (user) {
+    // Check if profile is complete
+    if (!user.profileComplete) {
+      return <Navigate to="/onboarding" replace />;
+    }
+    
     const dashboardPath = user.role === 'au_pair' 
       ? '/dashboard/au-pair'
       : user.role === 'host_family'

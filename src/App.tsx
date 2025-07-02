@@ -14,6 +14,7 @@ import HowItWorksPage from "./pages/HowItWorksPage";
 import AuPairDashboard from "./pages/dashboard/AuPairDashboard";
 import HostFamilyDashboard from "./pages/dashboard/HostFamilyDashboard";
 import MessagesPage from "./pages/dashboard/MessagesPage";
+import OnboardingPage from "./pages/OnboardingPage";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 import { AuthRedirect } from "./components/auth/AuthRedirect";
 import NotFound from "./pages/NotFound";
@@ -47,6 +48,14 @@ const App = () => (
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/how-it-works" element={<HowItWorksPage />} />
                 <Route path="/auth-redirect" element={<AuthRedirect />} />
+                <Route 
+                  path="/onboarding" 
+                  element={
+                    <ProtectedRoute>
+                      <OnboardingPage />
+                    </ProtectedRoute>
+                  } 
+                />
                 
                 {/* Protected Dashboard Routes */}
                 <Route 
