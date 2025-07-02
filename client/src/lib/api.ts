@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
-const API_BASE_URL = "https://au-pair.onrender.com";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://au-pair.onrender.com";
 
 // Create axios instance with base configuration
 export const api = axios.create({
