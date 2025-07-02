@@ -298,7 +298,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-hero text-white">
+      <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary dark:from-primary dark:via-primary dark:to-secondary">
         <div className="container px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -306,17 +306,17 @@ const LandingPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white dark:text-white">
               Ready to Find Your Perfect Match?
             </h2>
-            <p className="mt-4 text-lg opacity-90">
+            <p className="mt-4 text-lg text-white/90 dark:text-white/90">
               Join thousands of families and au pairs who have found their perfect match.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/register">Get Started Today</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-primary" asChild>
                 <Link to="/how-it-works">Learn More</Link>
               </Button>
             </div>

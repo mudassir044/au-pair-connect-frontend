@@ -119,6 +119,9 @@ The application follows a modern full-stack architecture with clear separation b
 ## Changelog
 
 - July 02, 2025. Initial setup
+- July 02, 2025. Migrated from Lovable to Replit environment
+- July 02, 2025. Fixed dark/light mode visibility issue in CTA section
+- July 02, 2025. Created Netlify deployment configuration files
 
 ## User Preferences
 
