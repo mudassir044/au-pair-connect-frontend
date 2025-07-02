@@ -1,0 +1,102 @@
+Diagnosis: The build failure is caused by the "vite" command not being found, resulting in an exit code 127.
+
+Solution: To resolve this issue, you need to ensure that the "vite" package is included in the project dependencies. Verify that "vite" is listed in the "package.json" file. If it is missing, you should add it as a dependency by running:
+
+npm install vite
+After adding "vite" to the dependencies, commit the changes to the repository and trigger a new build.
+
+
+Copy analysis for use in AI tools
+Ask ChatGPT
+Need more help? Go to Ask Netlify
+
+Retry diagnostics
+Netlify uses AI to analyze and generate solutions to fix deploy failures. It may not always understand the full context or produce a reliable, accurate answer. To learn more, please refer to our docs.
+
+Did you find this helpful? Your feedback helps improve this feature.
+
+
+
+Initializing
+Complete
+Building
+Failed
+11:23:11 PM: Netlify Build                                                 
+11:23:11 PM: ────────────────────────────────────────────────────────────────
+11:23:11 PM: ​
+11:23:11 PM: ❯ Version
+11:23:11 PM:   @netlify/build 33.5.0
+11:23:11 PM: ​
+11:23:11 PM: ❯ Flags
+11:23:11 PM:   accountId: 685414adabe1d4ef643dc4a8
+11:23:11 PM:   baseRelDir: true
+11:23:11 PM:   buildId: 686578f9199504000735e826
+11:23:11 PM:   deployId: 686578f9199504000735e828
+11:23:12 PM: ​
+11:23:12 PM: ❯ Current directory
+11:23:12 PM:   /opt/build/repo/client
+11:23:12 PM: ​
+11:23:12 PM: ❯ Config file
+11:23:12 PM:   /opt/build/repo/netlify.toml
+11:23:12 PM: ​
+11:23:12 PM: ❯ Context
+11:23:12 PM:   production
+11:23:12 PM: ​
+11:23:12 PM: ❯ Installing extensions
+11:23:12 PM:    - neon
+11:23:12 PM:    - simpleanalytics
+11:23:14 PM: ​
+11:23:14 PM: ❯ Loading extensions
+11:23:14 PM:    - neon
+11:23:14 PM:    - simpleanalytics
+11:23:16 PM: ​
+11:23:16 PM: build.command from netlify.toml                               
+11:23:16 PM: ────────────────────────────────────────────────────────────────
+11:23:16 PM: ​
+11:23:16 PM: $ npm run build
+11:23:16 PM: > rest-express@1.0.0 build
+11:23:16 PM: > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+11:23:16 PM: sh: 1: vite: not found
+11:23:16 PM: ​
+11:23:16 PM: "build.command" failed                                        
+11:23:16 PM: ────────────────────────────────────────────────────────────────
+11:23:16 PM: ​
+11:23:16 PM:   Error message
+11:23:16 PM:   Command failed with exit code 127: npm run build (https://ntl.fyi/exit-code-127)
+11:23:16 PM: ​
+11:23:16 PM:   Error location
+11:23:16 PM:   In build.command from netlify.toml:
+11:23:16 PM:   npm run build
+11:23:16 PM: ​
+11:23:16 PM:   Resolved config
+11:23:16 PM:   build:
+11:23:16 PM:     base: /opt/build/repo/client
+11:23:16 PM:     command: npm run build
+11:23:16 PM:     commandOrigin: config
+11:23:16 PM:     environment:
+11:23:16 PM:       - NODE_VERSION
+11:23:16 PM:     publish: /opt/build/repo/client/dist
+11:23:16 PM:     publishOrigin: config
+11:23:16 PM:   headers:
+11:23:17 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+11:23:17 PM:     - for: /static/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.js
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.css
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.html
+      values:
+        Cache-Control: public, max-age=0, must-revalidate
+  headersOrigin: config
+  redirects:
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+11:23:17 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+11:23:17 PM: Failing build: Failed to build site
+11:23:17 PM: Finished processing build request in 26.287s
