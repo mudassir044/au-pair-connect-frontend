@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# Au Pair Connect
 
-## Project info
+A modern platform connecting au pairs with host families worldwide.
 
-**URL**: https://lovable.dev/projects/16c86eb7-ff06-4f78-9188-381b25e8a68f
+## Features
 
-## How can I edit this code?
+- 🏠 **Host Family Dashboard** - Manage your family profile and find the perfect au pair
+- 👤 **Au Pair Dashboard** - Create your profile and connect with host families
+- 💬 **Real-time Messaging** - Secure communication between families and au pairs
+- 📝 **Smart Matching** - Advanced algorithm to find compatible matches
+- 📱 **Responsive Design** - Works seamlessly on all devices
+- 🔐 **Secure Authentication** - JWT-based auth with role-based access
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Vite
+- **UI**: Tailwind CSS, Radix UI, Framer Motion
+- **State Management**: React Query, Context API
+- **Forms**: React Hook Form with Zod validation
+- **Routing**: React Router DOM
+- **Notifications**: React Hot Toast
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/16c86eb7-ff06-4f78-9188-381b25e8a68f) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository
 
-Follow these steps:
+```bash
+git clone <your-repo-url>
+cd au-pair-connect
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Start the development server
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/          # Reusable UI components
+│   ├── auth/           # Authentication components
+│   ├── dashboard/      # Dashboard layouts
+│   ├── layout/         # App layout components
+│   ├── messaging/      # Chat and messaging
+│   ├── onboarding/     # User onboarding flow
+│   └── ui/             # Base UI components
+├── contexts/           # React contexts
+├── hooks/              # Custom React hooks
+├── lib/                # Utilities and API
+├── pages/              # Page components
+└── styles/             # Global styles
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Available Scripts
 
-## What technologies are used for this project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application is configured for easy deployment on platforms like Vercel, Netlify, or any static hosting service.
 
-## How can I deploy this project?
+1. Build the project:
 
-Simply open [Lovable](https://lovable.dev/projects/16c86eb7-ff06-4f78-9188-381b25e8a68f) and click on Share -> Publish.
+```bash
+npm run build
+```
 
-## Can I connect a custom domain to my Lovable project?
+2. Deploy the `dist` folder to your hosting platform
 
-Yes, you can!
+## Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+
+This project is private and proprietary.
